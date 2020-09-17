@@ -20,7 +20,13 @@ public void turnAround(){
             hop();
             turnAround();
             return true;
-          } else {
+          } else if(isFlower(AHEAD)){
+            turnAround();
+            hop();
+            turnAround();
+            return true;
+          }
+           else {
             turnAround();
             hop();
             turnAround();
