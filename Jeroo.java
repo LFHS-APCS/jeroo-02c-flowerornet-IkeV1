@@ -10,15 +10,15 @@ public class Jeroo extends JerooBase {
      *  No side effects and no errors.
      */
     public boolean isFlowerOrNetNearInFront() {
-        if(isClear(AHEAD)){
+        if(isFlower(AHEAD)){
           hop();
-          if(isClear(AHEAD)){
+          if(isFlower(AHEAD)){
             return true;
           }
         } else {
         return false;
+      }
     }
-
 
     // Do NOT touch the code below here
     public Jeroo() {super();}
