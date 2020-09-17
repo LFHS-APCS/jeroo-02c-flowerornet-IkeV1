@@ -13,9 +13,9 @@ public void turnAround(){
      *  No side effects and no errors.
      */
     public boolean isFlowerOrNetNearInFront() {
-        if(isFlower(AHEAD)){
+        if(!isClear(AHEAD)){
           hop();
-          if(isFlower(AHEAD)){
+          if(!isClear(AHEAD)){
             turnAround();
             hop();
             return true;
