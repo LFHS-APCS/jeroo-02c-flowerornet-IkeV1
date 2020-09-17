@@ -18,14 +18,18 @@ public void turnAround(){
           if(!isClear(AHEAD)){
             turnAround();
             hop();
+            turnAround();
             return false;
           } else {
-          hop();
+            turnAround();
+            hop();
+            turnAround();
           return false;
           }
         } else {
         return true;
         }
+        
       
         
     }
