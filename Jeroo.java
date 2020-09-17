@@ -32,9 +32,9 @@ public void turnAround(){
             turnAround();
           return true;
           }
-        } else {
+        } 
         return false;
-        }
+        
         
       
         
