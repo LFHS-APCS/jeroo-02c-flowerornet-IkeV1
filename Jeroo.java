@@ -13,21 +13,21 @@ public void turnAround(){
      *  No side effects and no errors.
      */
     public boolean isFlowerOrNetNearInFront() {
-        if(!isClear(AHEAD)){
+        if(isClear(AHEAD)){
           hop();
-          if(!isClear(AHEAD)){
+          if(isNet(AHEAD)){
             turnAround();
             hop();
             turnAround();
-            return false;
+            return true;
           } else {
             turnAround();
             hop();
             turnAround();
-          return false;
+          return true;
           }
         } else {
-        return true;
+        return false;
         }
         
       
