@@ -3,7 +3,10 @@
  * @author Steve Aronson
  */
 public class Jeroo extends JerooBase {
-
+public void turnAround(){
+  turn(LEFT);
+  turn(LEFT);
+}
     /** 
      * Is there a clear path to a net or flower two spaces away
      *     in the front of the Jeroo?
@@ -13,11 +16,18 @@ public class Jeroo extends JerooBase {
         if(isFlower(AHEAD)){
           hop();
           if(isFlower(AHEAD)){
+            turnAround();
+            hop();
             return true;
+          } else {
+          hop();
+          return false;
           }
         } else {
         return false;
-      }
+        }
+      
+        
     }
 
     // Do NOT touch the code below here
